@@ -1,0 +1,56 @@
+              #calendar{
+                border: 1px solid black;
+                width: 240px;
+                border: 2px solid lightgray;
+                display: none;
+                text-align: center;
+              }
+              #ipt{
+                width: 240px;
+                border-radius: 5px;
+                height: 25px;
+                border: 0px;
+                border: 1px solid black;
+              }
+             #calender td{
+             	 width:30px;
+             	 height: 20px;
+                 text-align: center;
+             }
+             i{
+             	cursor:pointer;
+             }
+             /*单击选中了日期时单元格样式*/
+             .td-choosed{
+                 background-color:green;
+             }
+              #calendar td:hover{
+                background: #eee;
+                cursor: pointer;
+             }
+             /*默认日期对应的单元格的样式*/
+             .default-choosed{
+                background-color:gray;
+             }
+             /*设置选择时间段时，在开始时间与结束时间之间单元格的样式*/
+             .day-in-range{
+                background:yellow;
+             }
+             /* 确定，取消按钮的样式*/
+             #calendar button{
+                width: 80px;
+                height: 30px;
+                outline: none;
+                border: none;
+                color: white;
+                cursor: pointer;
+                border-radius: 5px;
+                margin:0px;
+             }
+             .ok-btn{
+                    background-color: #009688;
+                    margin-right: 50px;
+             }
+             .cancel-btn{
+                    background-color:rgb(243, 69, 65);
+             }

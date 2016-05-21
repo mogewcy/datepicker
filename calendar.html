@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN-hans">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>
+    <input type="text" id='ipt' readonly>
+    <div id="calendar">
+                  <p class="month-year-change">
+                  <span class="day"></span>号
+                  <i class="fa fa-angle-double-left del-year" aria-hidden="true"></i>
+                  <i class="fa fa-angle-left del-month" aria-hidden="true"></i>
+                  <span class="month">4</span>月
+                  <span class="year">2016</span>年
+                  <i class="fa fa-angle-right add-month" aria-hidden="true"></i>
+                  <i class="fa fa-angle-double-right add-year" aria-hidden="true"></i>
+                  </p>
+    	<div>
+    	     <table class="day-list" id='myTable'>
+    	     </table>
+           <button type="button" class="ok-btn">ok</button>
+           <button type="button"  class="cancel-btn">cancel</button>
+    	</div>
+    </div>
+    </body>
+    <script src="calendar.js"></script>
+    <script type="text/javascript">
+          var a=new Calendar({
+                  id:"calendar",
+                  inputId:"ipt",
+                  tableId:'myTable',
+                  dayHeadFormat:['Sun','Mon','Tues','Wens','Thurs','Fri','Sat'],
+                  tableClassName:'day-list',
+                  defaultDate:'2016/06/20',
+                  isLimitedRange:true,
+                  startDate:'2015/6/21',// 日期范围的开端
+                  endDate:'2017/6/25',//日期范围的结束
+                  isSelectRange:false,//选择日期范围还是选择某一天
+                  minRangeLen:3,
+                  maxRangeLen:50,
+                  onSelected:function(){//选择日期后的回调函数
+                    /**
+                     * 如果是选择日期，则可以通过this.getRangeDate()获取选择的时间段
+                     * 如果是选择某一天，则可以通过this.getDayDate()获取选择的时间
+                     */
+                    //console.log(this.getRangeDate());//this.getDayDate()
+                    alert(this.getDayDate());
+                  }
+          });
+    </script>
+</html>
