@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Datepicker by mogeWCY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Datepicker</h1>
+      <h2 class="project-tagline">日期选择组件，无依赖，纯原生</h2>
+      <a href="https://github.com/mogeWCY/datepicker" class="btn">View on GitHub</a>
+      <a href="https://github.com/mogeWCY/datepicker/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/mogeWCY/datepicker/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <hr>
+
+<h1>
+<a id="datepicker-日期选择组件无依赖纯原生" class="anchor" href="#datepicker-%E6%97%A5%E6%9C%9F%E9%80%89%E6%8B%A9%E7%BB%84%E4%BB%B6%E6%97%A0%E4%BE%9D%E8%B5%96%E7%BA%AF%E5%8E%9F%E7%94%9F" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>datepicker 日期选择组件，无依赖，纯原生</h1>
+
+<hr>
+
+<p>（逃，其实是没用过框架</p>
+
+<blockquote>
+<p>关于我，欢迎关注<br>
+  博客：<a href="https://segmentfault.com/u/wcy">浴火小青春</a> 
+  一个稚嫩的程序猿~~~</p>
+</blockquote>
+
+<h4>
+<a id="示例" class="anchor" href="#%E7%A4%BA%E4%BE%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>示例:</h4>
+
+<p>上图：
+<img src="http://i4.buimg.com/0266068712fd2d50.png" alt="选择时间段">
+<img src="http://i4.buimg.com/ddbcea314e544973.png" alt="默认的某一天">
+<img src="http://i4.buimg.com/d8e272018e5039be.png" alt="选择某一天">
+<img src="http://i4.buimg.com/e3550aae660c6727.png" alt="选择时间段，跨了月份">
+<img src="http://i4.buimg.com/cdd2286306052cac.png" alt="选择时间段，跨了月份">
+<img src="http://i4.buimg.com/3d9e04be57d37239.png" alt="选择时间段，跨了月份">
+<br>
+界面大致效果是这样，回调的例子写的控制台打印就没截图下来，
+使用的时候可以修改你的'''calendar.css'''文件，样式都可以在里面修改</p>
+
+<h3>
+<a id="原理说明" class="anchor" href="#%E5%8E%9F%E7%90%86%E8%AF%B4%E6%98%8E" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>原理说明</h3>
+
+<p>设计思路的话等我的博文吧，打算写篇博客~~~</p>
+
+<h3>
+<a id="下载安装" class="anchor" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>下载安装</h3>
+
+<p>在html文件中添加以下代码</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">'</span>ipt<span class="pl-pds">'</span></span> <span class="pl-e">readonly</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>calendar<span class="pl-pds">"</span></span>&gt;
+                  &lt;<span class="pl-ent">p</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>month-year-change<span class="pl-pds">"</span></span>&gt;
+                  &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>day<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">span</span>&gt;号
+                  &lt;<span class="pl-ent">i</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>fa fa-angle-double-left del-year<span class="pl-pds">"</span></span> <span class="pl-e">aria-hidden</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">i</span>&gt;
+                  &lt;<span class="pl-ent">i</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>fa fa-angle-left del-month<span class="pl-pds">"</span></span> <span class="pl-e">aria-hidden</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">i</span>&gt;
+                  &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>month<span class="pl-pds">"</span></span>&gt;4&lt;/<span class="pl-ent">span</span>&gt;月
+                  &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>year<span class="pl-pds">"</span></span>&gt;2016&lt;/<span class="pl-ent">span</span>&gt;年
+                  &lt;<span class="pl-ent">i</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>fa fa-angle-right add-month<span class="pl-pds">"</span></span> <span class="pl-e">aria-hidden</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">i</span>&gt;
+                  &lt;<span class="pl-ent">i</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>fa fa-angle-double-right add-year<span class="pl-pds">"</span></span> <span class="pl-e">aria-hidden</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">i</span>&gt;
+                  &lt;/<span class="pl-ent">p</span>&gt;
+        &lt;<span class="pl-ent">div</span>&gt;
+             &lt;<span class="pl-ent">table</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>day-list<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">'</span>myTable<span class="pl-pds">'</span></span>&gt;
+             &lt;/<span class="pl-ent">table</span>&gt;
+           &lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>ok-btn<span class="pl-pds">"</span></span>&gt;ok&lt;/<span class="pl-ent">button</span>&gt;
+           &lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span>  <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>cancel-btn<span class="pl-pds">"</span></span>&gt;cancel&lt;/<span class="pl-ent">button</span>&gt;
+        &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>calendar.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<h3>
+<a id="使用方法" class="anchor" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>使用方法</h3>
+
+<p>有很多配置项，下面我一一介绍给大家~</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> a<span class="pl-k">=</span><span class="pl-k">new</span> <span class="pl-en">Calendar</span>({
+                  id<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>calendar<span class="pl-pds">"</span></span>, <span class="pl-c">//容器id</span>
+                  inputId<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>ipt<span class="pl-pds">"</span></span>,<span class="pl-c">//文本框id</span>
+                  tableId<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>myTable<span class="pl-pds">'</span></span>,<span class="pl-c">//table的id</span>
+                  dayHeadFormat<span class="pl-k">:</span>[<span class="pl-s"><span class="pl-pds">'</span>Sun<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Mon<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Tues<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Wens<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Thurs<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Fri<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Sat<span class="pl-pds">'</span></span>],<span class="pl-c">//日期头的格式，也可以填写[日，一，二，三，四，五，六]等</span>
+                  tableClassName<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>day-list<span class="pl-pds">'</span></span>,<span class="pl-c">//table的类名，若有多个类，以空格分开</span>
+                  defaultDate<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>2016/06/20<span class="pl-pds">'</span></span>,<span class="pl-c">//默认的日期</span>
+                  isLimitedRange<span class="pl-k">:</span><span class="pl-c1">true</span>,<span class="pl-c">//是否限定可以选择的日期</span>
+                  startDate<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>2015/6/21<span class="pl-pds">'</span></span>,<span class="pl-c">// 可选择日期范围的开端</span>
+                  endDate<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>2017/6/25<span class="pl-pds">'</span></span>,<span class="pl-c">//可选择日期范围的结束</span>
+                  isSelectRange<span class="pl-k">:</span><span class="pl-c1">false</span>,<span class="pl-c">//选择日期范围还是选择某一天</span>
+                  minRangeLen<span class="pl-k">:</span><span class="pl-c1">3</span>,<span class="pl-c">//最短的时间跨度</span>
+                  maxRangeLen<span class="pl-k">:</span><span class="pl-c1">50</span>,<span class="pl-c">//最长的时间跨度</span>
+                  <span class="pl-en">onSelected</span><span class="pl-k">:</span><span class="pl-k">function</span>(){<span class="pl-c">//选择日期后的回调函数</span>
+                    <span class="pl-c">/**</span>
+<span class="pl-c">                     * 如果是选择日期，则可以通过this.getRangeDate()获取选择的时间段</span>
+<span class="pl-c">                     * 如果是选择某一天，则可以通过this.getDayDate()获取选择的时间</span>
+<span class="pl-c">                     */</span>
+                    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-v">this</span>.<span class="pl-en">getRangeDate</span>());<span class="pl-c">//this.getDayDate()</span>
+          });</pre></div>
+
+<h3>
+<a id="todo可选" class="anchor" href="#todo%E5%8F%AF%E9%80%89" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TODO（可选）</h3>
+
+<ul>
+<li>设置不可以选的时间段和时间点</li>
+<li>设置显示的时间格式</li>
+</ul>
+
+<h2>
+<a id="备注" class="anchor" href="#%E5%A4%87%E6%B3%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>备注</h2>
+
+<p>欢迎大家找bug,提问题啊</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/mogeWCY/datepicker">Datepicker</a> is maintained by <a href="https://github.com/mogeWCY">mogeWCY</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
