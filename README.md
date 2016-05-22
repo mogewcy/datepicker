@@ -7,9 +7,6 @@
   博客：[浴火小青春](https://segmentfault.com/u/wcy) 
   一个稚嫩的程序猿~~~
 
-Github项目README.md模板  
-（项目背景/作用介绍）
-
 ####示例:  
 上图：
 ![选择时间段][1]
